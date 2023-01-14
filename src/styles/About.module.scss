@@ -1,0 +1,27 @@
+.about {
+    
+    margin-bottom: 4rem;
+    padding: 3rem 3rem;
+    border-radius: 5px;
+
+    background-color: white;
+    width: 75%;
+
+    h2 {
+        text-align: center;
+    }
+    
+    p {
+        margin-top: 2rem;
+        line-height: 1.5rem;
+    }
+
+}
+
+@media (max-width: 480px) {
+    .about {
+        
+        margin: 1rem 0 1rem 0;
+        width: 90%;
+    }    
+}

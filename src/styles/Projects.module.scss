@@ -1,0 +1,111 @@
+    @mixin button($name, $b-color, $f-color, $width, $height, $line-height) {
+        .#{$name} {
+            display: inline-block;
+            background-color: #{$b-color};
+            color: #{$f-color};
+            width: #{$width}rem;
+            height: #{$height}rem;;
+            line-height: #{$line-height}rem;
+            border-radius: 5px;
+            user-select: none;
+            text-align: center;
+            margin: 0.5rem;
+        }
+    }
+    
+    .projects {
+    
+        margin-bottom: 4rem;
+        padding: 3rem 3rem;
+        border-radius: 5px;
+        
+        width: 75%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: white;
+        
+        h2 {
+            text-align: center;
+        }
+
+        .project {
+
+            padding-top: 4rem;
+            display: flex;
+            justify-content: space-between;    
+            align-items: center;
+            
+            .screenshot {
+            
+                width: 50%;
+                
+                img {
+                    width: 25rem;
+                    border-radius: 5px;
+                };
+            }
+
+            .overview {
+            
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 50%;
+                
+                h4 {    
+                text-transform: uppercase;  
+                }
+                
+                p {
+                    line-height: 1.5rem;
+                }
+
+                span {
+                    align-self: flex-start;
+                    font-weight: bold;
+                }
+
+                .buttonsContainer {
+                    
+                    @include button('button', #335EFF, white, 8, 3, 3);
+                    
+                }
+            }
+
+        }
+
+    @media (max-width: 480px)
+    { 
+        
+        // portfolio
+        margin: 1rem 0 1rem 0;
+        text-align: center;
+        width: 90%;
+
+        .project {
+            
+            flex-direction: column;
+
+            .screenshot {
+                width: 100%;
+                padding: 1rem;
+                img {
+                    width: 100%;
+                }
+            }
+
+            .overview {
+                width: 90%;
+                
+                .buttonsContainer {
+                    display: flex;
+                    width: 100%;
+                    justify-content: space-around;
+                }
+            }
+        }
+
+    }
+}
