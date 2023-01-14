@@ -10,8 +10,8 @@ export default function Hero() {
     const $lang = 'eng' //useStore(lang);
 
     const socialMedia = [   
-        {link:'https://linkedin.com/in/sandrosimonore', icon:'https://cdn-icons-png.flaticon.com/512/1384/1384014.png'},
-        {link:'https://github.com/sandrosimonore', icon:'https://cdn-icons-png.flaticon.com/512/1051/1051326.png'},
+        {link:'https://linkedin.com/in/sandrosimonore', icon:'social-media-hero-linkedin.png'},
+        {link:'https://github.com/sandrosimonore', icon:'social-media-hero-github.png'},
         /* {link:'https://github.com/sandrosimonore', icon:'https://cdn-icons-png.flaticon.com/512/1384/1384012.png'} */
     
         
@@ -43,7 +43,12 @@ export default function Hero() {
                     {socialMedia.map((sm, i) => (
                         <li key={i}>
                             <a href={sm.link} target="_blank" rel="noopener noreferrer">
-                                <img src={sm.icon} alt="" />
+                                <Image 
+                                    src={`/assets/images/${sm.icon}`} 
+                                    width={200}
+                                    height={200}
+                                    alt="" 
+                                />
                             </a>
                         </li>
                     ))}

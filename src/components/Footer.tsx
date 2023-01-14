@@ -11,8 +11,8 @@ export default function Footer() {
     return (
         <footer className={styles.footer}>
     
-           {footerSocialMedia.map(sm => (
-                <div className={styles.iconContainer}>
+           {footerSocialMedia.map((sm, i) => (
+                <div key={i} className={styles.iconContainer}>
                     <a href={sm.link} target="_blank" rel="noopener noreferrer">
                         <div className={styles.icon}>
                             <Image 

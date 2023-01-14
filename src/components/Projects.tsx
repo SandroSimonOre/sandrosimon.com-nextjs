@@ -1,5 +1,6 @@
 // import { useStore } from '@nanostores/react';
 // import { lang } from '../store/language';
+import Image from 'next/image';
 import styles from '../styles/Projects.module.scss'
 import { projectsLanguage as data } from '../data/languageData';
 
@@ -18,7 +19,12 @@ export default function Projects() {
                     return <article className={styles.project} key={i}>
                 
                             <div className={styles.screenshot}>
-                                <img src={p.urlImage} alt="" />
+                                <Image 
+                                    src={p.urlImage}
+                                    width={800}
+                                    height={300} 
+                                    alt="" 
+                                />
                             </div>
                             <div className={styles.overview}>
                                 <h4>{p.title}</h4>
@@ -33,12 +39,12 @@ export default function Projects() {
                                 <br />
                                 <div className={styles.buttonsContainer}>
                                     { 
-                                        p.liveDemo && <a className={styles.button} href={p.liveDemo} target="_blank">
+                                        p.liveDemo && <a className={styles.button} href={p.liveDemo} target="_blank" rel="noopener noreferrer">
                                             {data[$lang].buttonTextDemo}
                                         </a> 
                                     }
                                     { 
-                                        p.linkToRepo && <a className={styles.button} href={p.linkToRepo} target="_blank">
+                                        p.linkToRepo && <a className={styles.button} href={p.linkToRepo} target="_blank" rel="noopener noreferrer">
                                             {data[$lang].buttonTextRepo}
                                         </a> 
                                     }

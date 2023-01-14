@@ -1,3 +1,4 @@
+import Image from "next/image"
 import { skillsLanguage as data } from "../data/languageData"
 import styles from '../styles/Skills.module.scss'
 // import { useStore } from '@nanostores/react';
@@ -30,7 +31,12 @@ export default function Skills() {
 				{
 					skills.map( (s, i) => (
 					<div className={styles.skillCard} key={i}>
-						<img src={s.icon} alt="" />
+						<Image 
+							src={s.icon}
+							width={500}
+							height={500} 
+							alt="" 
+						/>
 						<span>{s.skillTitle}</span>
 					</div>
 					))

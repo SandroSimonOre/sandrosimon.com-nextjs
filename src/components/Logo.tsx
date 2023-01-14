@@ -1,10 +1,11 @@
+import Link from 'next/link'
 import styles from '../styles/Logo.module.scss'
 
 export default function Logo() {
     return (
         <div className={styles.logo}>
 
-            <a href="/">
+            <Link href="/">
                 
                 <span className={styles.bracket}>&#123;</span>
 
@@ -15,7 +16,7 @@ export default function Logo() {
                 
                 <span className={styles.bracket}>&#125;</span>
                 
-            </a>
+            </Link>
                 
         </div>
     )

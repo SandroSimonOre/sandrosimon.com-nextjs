@@ -1,5 +1,6 @@
 //import { useStore } from '@nanostores/react';
 //import { lang } from '../store/language';
+import Image from 'next/image';
 import styles from '../styles/Certifications.module.scss'
 import { certificationsLanguage as data } from '../data/languageData';
 
@@ -28,7 +29,12 @@ export default function Certifications() {
                         <article className={styles.certification} key={i}>
                             <div className={styles.imageContainer}>
                                 <a href={c.link} target="_blank" rel="noopener noreferrer">
-                                    <img src={`/assets/images/${c.img}`} alt="" />
+                                    <Image 
+                                        src={`/assets/images/${c.img}`} 
+                                        width={800}
+                                        height={800}
+                                        alt="" 
+                                    />
                                 </a>
                             </div>
                             <div className={styles.title}>
