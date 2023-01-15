@@ -1,9 +1,8 @@
 //import { useStore } from '@nanostores/react';
 //import { lang } from '../store/language';
 import Image from 'next/image';
-import heroImage from '../../public/assets/images/hero-developer-activity.svg'
-import styles from '../styles/Hero.module.scss';
 import { heroLanguage as data } from '../data/languageData';
+import styles from '../styles/Hero.module.scss';
 
 export default function Hero() {
 

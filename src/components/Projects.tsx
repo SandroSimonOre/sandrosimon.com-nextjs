@@ -1,8 +1,8 @@
 // import { useStore } from '@nanostores/react';
 // import { lang } from '../store/language';
 import Image from 'next/image';
-import styles from '../styles/Projects.module.scss'
 import { projectsLanguage as data } from '../data/languageData';
+import styles from '../styles/Projects.module.scss'
 
 export default function Projects() {
    

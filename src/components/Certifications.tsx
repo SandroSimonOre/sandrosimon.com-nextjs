@@ -26,7 +26,7 @@ export default function Certifications() {
                     
                     certificates.map( (c, i) => (
                         
-                        <article className={styles.certification} key={i}>
+                        <article data-testid = {`carousel-item-${i}`} className={styles.certification} key={i}>
                             <div className={styles.imageContainer}>
                                 <a href={c.link} target="_blank" rel="noopener noreferrer">
                                     <Image 
@@ -44,7 +44,7 @@ export default function Certifications() {
                     
                     ))   
                 }
-
+                
             </div>
         
         </section>
