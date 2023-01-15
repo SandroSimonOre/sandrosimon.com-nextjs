@@ -1,6 +1,7 @@
 //import { useStore } from '@nanostores/react';
 //import { lang } from '../store/language';
 import Image from 'next/image';
+import { Carousel } from './Carousel';
 import styles from '../styles/Certifications.module.scss'
 import { certificationsLanguage as data } from '../data/languageData';
 
@@ -21,7 +22,11 @@ export default function Certifications() {
             <h2>{data[$lang].title}</h2>
     
             <div className={styles.certificationsContainer}>
-                    
+                <Carousel
+                    itemsToShow={2}
+                    showArrows={true}
+                    showIndicators={false}
+                >  
                 {
                     
                     certificates.map( (c, i) => (
@@ -44,7 +49,7 @@ export default function Certifications() {
                     
                     ))   
                 }
-                
+                </Carousel>
             </div>
         
         </section>

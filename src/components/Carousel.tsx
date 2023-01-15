@@ -1,14 +1,15 @@
 import React, { useState } from "react"
 import { ICarouselProps } from "@/interfaces/ICarouselProps"
+import styles from "../styles/Carousel.module.scss"
 
 export const Carousel = (props: ICarouselProps): JSX.Element => {
 
-    const { showArrows, showIndicators, numberOfItems, children } = props
+    const { showArrows, showIndicators, children } = props
     const [currentIndex, setCurrentIndex] = useState<number>(0)
     const [touchPosition, setTouchPosition] = useState<number | null>(null) 
     
     const nextItem = () => {
-        if (currentIndex < numberOfItems - 1) {
+        if (currentIndex < React.Children.count(children) - 1) {
             setCurrentIndex(prevState => prevState + 1)
         }
     }
@@ -55,6 +56,27 @@ export const Carousel = (props: ICarouselProps): JSX.Element => {
     }
     
     return (
-        <h1>Carousel</h1>
+        <div className={styles.carousel}>
+            <div className={styles.carouselWrapper}>
+                <button onClick={previousItem}  className={styles.leftArrowButton}>
+                    <span className={styles.leftArrow}>&#8249;</span>
+                </button>
+                <div 
+                    className={styles.carouselContentWrapper} 
+                    onTouchStart={handleTouchStart}
+                    onTouchMove={handleTouchMove}
+                >
+                    <div 
+                        className={styles.carouselContent}
+                        style={{ transform: `translateX(-${currentIndex * 50}%)` }}
+                    >
+                        {props.children}
+                    </div>
+                </div>
+                <button onClick={nextItem} className={styles.rightArrowButton}>
+                    <span className={styles.rightArrow}>&#8250;</span>
+                </button>
+            </div>
+        </div>
     )
 }
