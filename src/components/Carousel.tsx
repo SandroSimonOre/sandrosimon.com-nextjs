@@ -13,28 +13,19 @@ export const Carousel = (props: ICarouselProps): JSX.Element => {
     
     useLayoutEffect(()=>{
         if (carouselContentWrapperRef.current != null && carouselContentRef.current != null) {
-            setVisibleItems(carouselContentWrapperRef.current.offsetWidth / carouselContentRef.current.children[0].clientWidth)
-        }
-        
-        
+            setVisibleItems(carouselContentWrapperRef.current.clientWidth / carouselContentRef.current.children[0].clientWidth)
+        }   
     }, [])
-    /* const visibleItems = React.useMemo(()=>{
-        if (carouselContentWrapperRef.current != null && carouselContentRef.current != null) {
-
-            return carouselContentWrapperRef.current.clientWidth / carouselContentRef.current.children[0].clientWidth   
-        }
-
-    }, []) */
     
-    const nextItem = () => {
-        if (currentIndex < React.Children.count(children) - 1) {
-            setCurrentIndex(prevState => prevState + 1)
-        }
-    }
-
     const previousItem = () => {
         if (currentIndex > 0) {
             setCurrentIndex(prevState => prevState - 1)
+        }
+    }
+
+    const nextItem = () => {
+        if (currentIndex < React.Children.count(children) - 1 * visibleItems) {
+            setCurrentIndex(prevState => prevState + 1)
         }
     }
 
@@ -74,17 +65,7 @@ export const Carousel = (props: ICarouselProps): JSX.Element => {
     }
 
     const handleClick =()=>{
-        //alert(carouselContentRef.current?.children[0].clientWidth)
-        //alert(carouselContentRef.current?.children[0].className)
-        //if (carouselContentRef.current)
-        //alert(visibleItems)
-        //alert(carouselContentRef.current?.clientWidth + "   " + carouselContentRef.current?.children[0].clientWidth)
-        //alert(carouselContentRef.current?.className + "   " + carouselContentRef.current?.children[0].clientWidth)
-        /* let message = ''
-        message += carouselContentWrapperRef.current?.clientWidth + '\n'
-        message += carouselContentRef.current?.clientWidth + '\n'
-        message += carouselContentRef.current?.children[0].clientWidth + '\n'
-        alert(message) */
+        
         alert(visibleItems)
     }
     
@@ -105,7 +86,7 @@ export const Carousel = (props: ICarouselProps): JSX.Element => {
                     <div 
                         className={styles.carouselContent}
                         ref={carouselContentRef}
-                        style={{ transform: `translateX(-${currentIndex * 50}%)` }}
+                        style={{ transform: `translateX(-${currentIndex * 100 / React.Children.count(children)}%)`}}
                     >
                         {props.children}
                     </div>
@@ -116,7 +97,7 @@ export const Carousel = (props: ICarouselProps): JSX.Element => {
                     <span className={styles.rightArrow}>&#8250;</span>
                 </button>
             </div>
-            <button onClick={handleClick}>Test</button>
+            
         </div>
     )
 }
