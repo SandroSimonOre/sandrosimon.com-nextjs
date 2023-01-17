@@ -2,6 +2,7 @@
 
     width: 100%;
     position: fixed;
+    z-index: 1000;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -16,6 +17,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+
         ul {
     
             display: flex;
@@ -24,6 +26,7 @@
             text-transform: uppercase;
     
             li {
+
                 letter-spacing: 1.5px;
                 font-size: 14px;
                 
@@ -43,8 +46,7 @@
 
 
 @media (max-width: 480px) {
-    .navbar {
-        
+    .header .navbar ul {
         display: none;
     }    
 }

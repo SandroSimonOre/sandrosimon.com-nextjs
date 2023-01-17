@@ -1,12 +1,21 @@
-import React, { useState } from "react"
+import React, { useState, useRef, useLayoutEffect } from "react"
 import { ICarouselProps } from "@/interfaces/ICarouselProps"
 import styles from "../styles/Carousel.module.scss"
 
 export const Carousel = (props: ICarouselProps): JSX.Element => {
-
+    
+    const carouselContentRef = useRef<HTMLInputElement>(null);
     const { showArrows, showIndicators, children } = props
     const [currentIndex, setCurrentIndex] = useState<number>(0)
     const [touchPosition, setTouchPosition] = useState<number | null>(null) 
+    const [visibleItems, setVisibleItems] = useState<number>(0)
+    
+    useLayoutEffect(()=>{
+        if (carouselContentRef.current != null) {
+            setVisibleItems(carouselContentRef.current.offsetWidth / carouselContentRef.current.firstChild.offsetWidth)
+        }
+        
+    }, [])
     
     const nextItem = () => {
         if (currentIndex < React.Children.count(children) - 1) {
@@ -54,6 +63,12 @@ export const Carousel = (props: ICarouselProps): JSX.Element => {
         // Reset initial touch position
         setTouchPosition(null)
     }
+
+    const handleClick =()=>{
+        //alert(carouselContentRef.current.children[1].offsetWidth)
+        //if (carouselContentRef.current)
+        alert(visibleItems)
+    }
     
     return (
         <div className={styles.carousel}>
@@ -68,7 +83,8 @@ export const Carousel = (props: ICarouselProps): JSX.Element => {
                 >
                     <div 
                         className={styles.carouselContent}
-                        style={{ transform: `translateX(-${currentIndex * 50}%)` }}
+                        ref={carouselContentRef}
+                        /* style={{ transform: `translateX(-${currentIndex * 100}%)` }} */
                     >
                         {props.children}
                     </div>
@@ -77,6 +93,7 @@ export const Carousel = (props: ICarouselProps): JSX.Element => {
                     <span className={styles.rightArrow}>&#8250;</span>
                 </button>
             </div>
+            <button onClick={handleClick}>Test</button>
         </div>
     )
 }

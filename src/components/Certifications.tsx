@@ -1,7 +1,8 @@
 //import { useStore } from '@nanostores/react';
 //import { lang } from '../store/language';
-import Image from 'next/image';
+
 import { Carousel } from './Carousel';
+import {CertificationCard} from './CertificationCard';
 import styles from '../styles/Certifications.module.scss'
 import { certificationsLanguage as data } from '../data/languageData';
 
@@ -23,30 +24,17 @@ export default function Certifications() {
     
             <div className={styles.certificationsContainer}>
                 <Carousel
-                    itemsToShow={2}
                     showArrows={true}
                     showIndicators={false}
                 >  
                 {
-                    
+                    //  src={`/assets/images/${c.img}`} 
                     certificates.map( (c, i) => (
-                        
-                        <article data-testid = {`carousel-item-${i}`} className={styles.certification} key={i}>
-                            <div className={styles.imageContainer}>
-                                <a href={c.link} target="_blank" rel="noopener noreferrer">
-                                    <Image 
-                                        src={`/assets/images/${c.img}`} 
-                                        width={800}
-                                        height={800}
-                                        alt="" 
-                                    />
-                                </a>
-                            </div>
-                            <div className={styles.title}>
-                                <h4>{c.title}</h4>    
-                            </div>
-                        </article>
-                    
+                        <CertificationCard
+                            title={c.title}
+                            img={`/assets/images/${c.img}`}
+                            linkImg={c.link}
+                        />
                     ))   
                 }
                 </Carousel>
