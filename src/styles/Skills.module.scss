@@ -44,30 +44,29 @@
 
 
 @media (max-width: 480px) {
-    // skills
+
     .skills {
         
-        margin: 1rem 0 1rem 0;
+        margin: 0;
         padding: 2rem;
-        width: 90%;
-
+        width: 100%;
 
         .skillsContainer {
 
             width: 100%;
             grid-template-columns: repeat(3, 1fr);
-            //gap: 0.3rem;
+            gap: 0.6rem;
 
-        .skillCard {
-            //background-color: red;
-            width: 6rem;
-            height: 6rem;
+            .skillCard {
             
-            img {
-                height: 2rem;
+                width: 5rem;
+                height: 5rem;
+            
+                img {
+                    height: 1.5rem;
+                }
             }
         }
-    }
     }
     
 }

@@ -54,7 +54,17 @@
 }
 
 @media (max-width: 480px) {
-  .carousel .carouselWrapper .carouselContentWrapper .carouselContent {
-    width: 400%; // Manipulate with JS: 4 items => 4 * 100%; 5 items => 5 * 100%; 6 items => 6 * 100%
+  .carousel .carouselWrapper {
+    .leftArrowButton {
+      left: -16px;
+    }
+
+    .rightArrowButton {
+      right: -16px;
+    }
+    .carouselContentWrapper .carouselContent {
+      width: 400%; // Manipulate with JS: 4 items => 4 * 100%; 5 items => 5 * 100%; 6 items => 6 * 100%
+    }
+
   }
 }

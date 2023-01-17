@@ -14,18 +14,13 @@
     
     h2 {
         text-align: center;
-        margin-bottom: 4rem;
+        margin-bottom: 2rem;
     }
 
     .certificationsContainer {
 
-        //display: flex;
         width: 100%;
-        //justify-content: center;
-        //flex-wrap: wrap;
-        //gap: 1rem;
-        //align-items: center;
-
+        
     }
         
 }
@@ -34,10 +29,13 @@
         
     .certifications {
         
-        width: 90%;
-        margin: 1rem 0 1rem 0;
+        width: 100%;
+        margin: 0;
         padding: 2rem;
-
+        
+        h2 {
+            margin-bottom: 0rem;
+        }
     
     }
     

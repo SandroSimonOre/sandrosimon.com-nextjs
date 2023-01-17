@@ -46,7 +46,12 @@
 
 
 @media (max-width: 480px) {
-    .header .navbar ul {
-        display: none;
+    
+    .header {
+        padding: 0.5rem 1rem;
+        
+        .navbar ul {
+            display: none;
+        }
     }    
 }

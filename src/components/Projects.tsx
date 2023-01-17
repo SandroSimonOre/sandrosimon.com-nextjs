@@ -14,9 +14,9 @@ export default function Projects() {
             <h2>{data[$lang].title}</h2>
 
             {
-                data[$lang].projects.map( (p, i) => {
+                data[$lang].projects.map( (p, i) => (
                     
-                    return <article className={styles.project} key={i}>
+                    <article className={styles.project} key={i}>
                 
                             <div className={styles.screenshot}>
                                 <Image 
@@ -51,9 +51,9 @@ export default function Projects() {
                                 </div>
                             
                             </div>
-                        </article>
+                    </article>
 
-                })
+                ))
                     
             }
 

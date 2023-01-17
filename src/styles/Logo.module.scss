@@ -1,6 +1,5 @@
 .logo {
     
-    width: 25%;
     display: flex;
     justify-content: center;
 
@@ -47,10 +46,4 @@
 
 @media (max-width: 480px) {
         
-    .logo {
-        //padding-left: 2rem;
-        //background-color: yellow;
-        width: 70%;
-        //margin-left: 2rem;
-    }
 }

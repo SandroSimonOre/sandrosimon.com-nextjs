@@ -17,7 +17,7 @@ export default function Skills() {
 		{ icon: "/assets/images/skills-mongodb.svg", skillTitle: 'MongoDB' },
 		{ icon: "/assets/images/skills-git.svg", skillTitle: 'Git' },
 		{ icon: "/assets/images/skills-docker.webp", skillTitle: 'Docker' },
-		{ icon: "/assets/images/skills-aws.png", skillTitle: 'Amazon  WS'}
+		{ icon: "/assets/images/skills-aws.png", skillTitle: 'AWS'}
 	]
 
 	const $lang = 'eng' //useStore(lang);

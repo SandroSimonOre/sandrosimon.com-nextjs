@@ -52,7 +52,6 @@
 
         }
 
-    
     }
     
     .socialMedia {
@@ -74,7 +73,6 @@
             }
         }
 
-        
     }
     
 }
@@ -83,14 +81,18 @@
 @media (max-width: 480px) {
 
     .hero {
+
         width: 100%;
+        margin: 0;
 
         .content {
+            
+            padding-top: 1rem;
             flex-direction: column-reverse;
 
             .illustration {
                 width: 100%;
-                margin-bottom: 3rem;
+                margin: 3rem 0 0;
             }
 
             .presentation {
