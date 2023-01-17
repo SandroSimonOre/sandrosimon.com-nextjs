@@ -47,7 +47,7 @@
       .carouselContent{
         display: flex;
         width: 200%; // Manipulate with JS: 4 items => 4 * 50%; 5 items => 5 * 50%; 6 items => 6 * 50%
-
+        transition: all 250ms linear;
       }
     }
   }
