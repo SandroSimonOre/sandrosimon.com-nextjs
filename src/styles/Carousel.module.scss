@@ -17,7 +17,6 @@
       border-radius: 24px;
       background-color: black;
       opacity: 0.6;
-      //border: 1px solid #ddd;
       color: white;
       cursor: pointer;
       display: flex;
@@ -38,24 +37,16 @@
       font-size: 2rem;
       
     }
-    
 
     .carouselContentWrapper{
       
       overflow: hidden;
       //justify-content: center;
-      //width: 100%;
+      width: 100%;
 
       .carouselContent{
         display: flex;
-        width: 200%; // Manipulate with JS
-
-        /* & > * {
-          width: 50%;
-          //flex-shrink: 0;
-          //flex-grow: 1;
-
-        } */
+        width: 200%; // Manipulate with JS: 4 items => 4 * 50%; 5 items => 5 * 50%; 6 items => 6 * 50%
 
       }
     }
@@ -64,8 +55,6 @@
 
 @media (max-width: 480px) {
   .carousel .carouselWrapper .carouselContentWrapper .carouselContent {
-    width: 400%;
-    //border: 1px solid red;
-    //flex-grow: 1;
+    width: 400%; // Manipulate with JS: 4 items => 4 * 100%; 5 items => 5 * 100%; 6 items => 6 * 100%
   }
 }

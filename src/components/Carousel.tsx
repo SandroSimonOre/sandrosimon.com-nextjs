@@ -1,21 +1,30 @@
-import React, { useState, useRef, useLayoutEffect } from "react"
+import React, { useState, useRef, useLayoutEffect, useEffect } from "react"
 import { ICarouselProps } from "@/interfaces/ICarouselProps"
 import styles from "../styles/Carousel.module.scss"
 
 export const Carousel = (props: ICarouselProps): JSX.Element => {
-    
-    const carouselContentRef = useRef<HTMLInputElement>(null);
+
+    const carouselContentWrapperRef = useRef<HTMLInputElement>(null)
+    const carouselContentRef = useRef<HTMLInputElement>(null)
     const { showArrows, showIndicators, children } = props
     const [currentIndex, setCurrentIndex] = useState<number>(0)
     const [touchPosition, setTouchPosition] = useState<number | null>(null) 
     const [visibleItems, setVisibleItems] = useState<number>(0)
     
     useLayoutEffect(()=>{
-        if (carouselContentRef.current != null) {
-            setVisibleItems(carouselContentRef.current.offsetWidth / carouselContentRef.current.firstChild.offsetWidth)
+        if (carouselContentWrapperRef.current != null && carouselContentRef.current != null) {
+            setVisibleItems(carouselContentWrapperRef.current.offsetWidth / carouselContentRef.current.children[0].clientWidth)
         }
         
+        
     }, [])
+    /* const visibleItems = React.useMemo(()=>{
+        if (carouselContentWrapperRef.current != null && carouselContentRef.current != null) {
+
+            return carouselContentWrapperRef.current.clientWidth / carouselContentRef.current.children[0].clientWidth   
+        }
+
+    }, []) */
     
     const nextItem = () => {
         if (currentIndex < React.Children.count(children) - 1) {
@@ -65,30 +74,44 @@ export const Carousel = (props: ICarouselProps): JSX.Element => {
     }
 
     const handleClick =()=>{
-        //alert(carouselContentRef.current.children[1].offsetWidth)
+        //alert(carouselContentRef.current?.children[0].clientWidth)
+        //alert(carouselContentRef.current?.children[0].className)
         //if (carouselContentRef.current)
+        //alert(visibleItems)
+        //alert(carouselContentRef.current?.clientWidth + "   " + carouselContentRef.current?.children[0].clientWidth)
+        //alert(carouselContentRef.current?.className + "   " + carouselContentRef.current?.children[0].clientWidth)
+        /* let message = ''
+        message += carouselContentWrapperRef.current?.clientWidth + '\n'
+        message += carouselContentRef.current?.clientWidth + '\n'
+        message += carouselContentRef.current?.children[0].clientWidth + '\n'
+        alert(message) */
         alert(visibleItems)
     }
     
     return (
         <div className={styles.carousel}>
             <div className={styles.carouselWrapper}>
+                
                 <button onClick={previousItem}  className={styles.leftArrowButton}>
                     <span className={styles.leftArrow}>&#8249;</span>
                 </button>
+                
                 <div 
                     className={styles.carouselContentWrapper} 
+                    ref={carouselContentWrapperRef}
                     onTouchStart={handleTouchStart}
                     onTouchMove={handleTouchMove}
                 >
                     <div 
                         className={styles.carouselContent}
                         ref={carouselContentRef}
-                        /* style={{ transform: `translateX(-${currentIndex * 100}%)` }} */
+                        style={{ transform: `translateX(-${currentIndex * 50}%)` }}
                     >
                         {props.children}
                     </div>
+                
                 </div>
+                
                 <button onClick={nextItem} className={styles.rightArrowButton}>
                     <span className={styles.rightArrow}>&#8250;</span>
                 </button>

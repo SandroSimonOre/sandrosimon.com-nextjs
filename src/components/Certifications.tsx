@@ -28,9 +28,9 @@ export default function Certifications() {
                     showIndicators={false}
                 >  
                 {
-                    //  src={`/assets/images/${c.img}`} 
                     certificates.map( (c, i) => (
                         <CertificationCard
+                            key={i}
                             title={c.title}
                             img={`/assets/images/${c.img}`}
                             linkImg={c.link}
