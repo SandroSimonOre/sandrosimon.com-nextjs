@@ -1,8 +1,14 @@
-import React, { useState, useRef, useLayoutEffect, useEffect } from "react"
-import { ICarouselProps } from "@/interfaces/ICarouselProps"
-import styles from "../styles/Carousel.module.scss"
+import React, { useState, useRef, useLayoutEffect } from "react"
+import { useContext } from 'react';
+import { LanguageContextType } from '@/@types/language';
+import { LanguageContext } from '@/contexts/languageContext';
+import { ICarouselProps } from "@/interfaces/ICarouselProps";
+import { carouselLanguage as data } from '../data/languageData';
+import styles from "../styles/Carousel.module.scss";
 
 export const Carousel = (props: ICarouselProps): JSX.Element => {
+
+    const { language } = useContext(LanguageContext) as LanguageContextType
 
     const carouselContentWrapperRef = useRef<HTMLInputElement>(null)
     const carouselContentRef = useRef<HTMLInputElement>(null)
@@ -93,7 +99,10 @@ export const Carousel = (props: ICarouselProps): JSX.Element => {
                 </button>
             </div>
             <div className={styles.indicator}>
-                {`${currentIndex + 1} ${visibleItems === 2 ? ' - ' + (currentIndex + 2):''} of ${React.Children.count(children)}`}
+                {`${currentIndex + 1} ${visibleItems === 2
+                    ? ' - ' + (currentIndex + 2)
+                    :''} ${data[language].indicatorText} ${React.Children.count(children)}`
+                }
             </div>
             
         </div>

@@ -139,6 +139,17 @@ export const certificationsLanguage =  {
 
 }
 
+export const carouselLanguage = {
+    
+    eng: {
+        indicatorText: "of",
+    },
+
+    esp: {
+        indicatorText: "de",
+    }
+}
+
 export const navbarLanguage =  {
 
     eng: {

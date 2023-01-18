@@ -85,25 +85,34 @@
     
     .projects { 
         // portfolio
+        display: flex;
+        align-items: center;
         margin: 0;
         padding: 3rem 0;
         text-align: center;
         width: 100%;
 
         h2 {
-            padding-bottom: 0;           
+            padding-bottom: 2rem;           
         }
         .project {
             
+            border: 1px solid gray;
             flex-direction: column;
+            width: 90%;
+            border-radius: 10px;
+            overflow: hidden;
+            padding-bottom: 1rem;
+            margin-bottom: 2rem;
 
             .screenshot {
                 
                 width: 100%;
-                padding: 1rem;
+                margin-bottom: 1rem;
 
                 img {
                     width: 100%;
+                    border-radius: 0;
                 }
             }
 
