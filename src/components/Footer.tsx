@@ -10,26 +10,42 @@ export const Footer = () => {
     
     return (
         <footer className={styles.footer}>
-    
-           {footerSocialMedia.map((sm, i) => (
-                <div key={i} className={styles.iconContainer}>
-                    <a href={sm.link} target="_blank" rel="noopener noreferrer">
-                        <div className={styles.icon}>
-                            <Image 
-                                src={`/assets/images/${sm.icon}`}
-                                width={30}
-                                height={30}
-                                alt=""
-                                className={styles.img}
-                            />
-                        </div>
 
-                        <div>
-                            <span className={styles.title}>{sm.title}</span>
-                        </div>
+            <div className={styles.socialMediaContainer}>
+    
+                {footerSocialMedia.map((sm, i) => (
+                    <div key={i} className={styles.iconContainer}>
+                        <a href={sm.link} target="_blank" rel="noopener noreferrer">
+                            <div className={styles.icon}>
+                                <Image 
+                                    src={`/assets/images/${sm.icon}`}
+                                    width={30}
+                                    height={30}
+                                    alt=""
+                                    className={styles.img}
+                                />
+                            </div>
+
+                            <div>
+                                <span className={styles.title}>{sm.title}</span>
+                            </div>
+                        </a>
+                    </div>
+                ))}
+
+            </div>
+            
+            <div className={styles.sourceLink}>
+                <p>
+                    
+                    <a 
+                        href='https://github.com/SandroSimonOre/sandrosimon.com-nextjs'
+                        target="_blank" rel="noopener noreferrer"
+                    >
+                        Website repository
                     </a>
-                </div>
-            ))}
+                </p>
+            </div>
 
         </footer>
     )
