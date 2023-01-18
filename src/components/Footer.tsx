@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import styles from '../styles/Footer.module.scss'
 
-export default function Footer() {
+export const Footer = () => {
     
     const footerSocialMedia = [
         { link: 'https://linkedin.com/in/sandrosimonore/', icon: 'social-media-footer-linkedin.png', title:'Linkedin'},

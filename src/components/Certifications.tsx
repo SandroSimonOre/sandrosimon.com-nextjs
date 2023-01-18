@@ -1,14 +1,14 @@
-//import { useStore } from '@nanostores/react';
-//import { lang } from '../store/language';
-
 import { Carousel } from './Carousel';
-import {CertificationCard} from './CertificationCard';
-import styles from '../styles/Certifications.module.scss'
+import { CertificationCard } from './CertificationCard';
+import { useContext } from 'react';
+import { LanguageContextType } from '@/@types/language';
+import { LanguageContext } from '@/contexts/languageContext';
 import { certificationsLanguage as data } from '../data/languageData';
+import styles from '../styles/Certifications.module.scss'
 
-export default function Certifications() {
+export const Certifications = () => {
     
-    const $lang = 'eng' //useStore(lang);
+    const { language } = useContext(LanguageContext) as LanguageContextType
     
     const certificates = [
         {title: 'FRONTEND CON REACT.JS', img: 'certification-platzi-frontend-react.jpg', link: 'https://platzi.com/p/sandrosimon/ruta/8-desarrollo-react/diploma/detalle/'},
@@ -20,7 +20,7 @@ export default function Certifications() {
     return (
         <section className={styles.certifications}>
 
-            <h2>{data[$lang].title}</h2>
+            <h2>{data[language].title}</h2>
     
             <div className={styles.certificationsContainer}>
                 <Carousel

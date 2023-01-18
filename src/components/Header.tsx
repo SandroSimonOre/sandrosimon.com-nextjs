@@ -1,12 +1,16 @@
-import styles from '../styles/Header.module.scss';
-import Logo from './Logo';
-import LanguageToogle from './LanguageToogle';
+import { Logo } from './Logo';
+import { LanguageToogle } from './LanguageToogle';
 
 import { navbarLanguage as data } from '../data/languageData';
+import { useContext } from 'react';
+import { LanguageContextType } from '@/@types/language';
+import { LanguageContext } from '@/contexts/languageContext';
 
-export default function Header() {
+import styles from '../styles/Header.module.scss';
+
+export const Header = () => {
     
-    const $lang = 'eng' //useStore(lang);
+    const { language } = useContext(LanguageContext) as LanguageContextType
     
     return (
         <header className={styles.header}>
@@ -14,9 +18,9 @@ export default function Header() {
                 <Logo />
                 <ul>
                     
-                    <li><a href="#about">{ data[$lang].aboutMe }</a></li>
-                    <li><a href="#projects">{ data[$lang].projects }</a></li>
-                    <li><a href="#contact">{ data[$lang].contact }</a></li>
+                    <li><a href="#about">{ data[language].aboutMe }</a></li>
+                    <li><a href="#projects">{ data[language].projects }</a></li>
+                    <li><a href="#contact">{ data[language].contact }</a></li>
                     
                 </ul>
             </nav>

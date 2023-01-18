@@ -1,15 +1,13 @@
 import {useState} from 'react'; 
-// import { useStore } from '@nanostores/react';
-// import { lang } from '../store/language';
 import styles from '../styles/Contact.module.scss'
 import { contactLanguage as data } from '../data/languageData';
+import { useContext } from 'react';
+import { LanguageContextType } from '@/@types/language';
+import { LanguageContext } from '@/contexts/languageContext';
 
+export const Contact = () => {
 
- // TODO: Read the local storage or the browser setting
-
-export default function Contact() {
-
-    const $lang = 'eng' // useStore(lang);
+    const { language } = useContext(LanguageContext) as LanguageContextType
 
     const [formData, setFormData] = useState({
         name: '',
@@ -51,22 +49,22 @@ export default function Contact() {
         
         <section id='contact' className={styles.contact}>
 
-            <h2>{data[$lang].title}</h2>
+            <h2>{data[language].title}</h2>
     
             <div className={styles.contactInfo}>
-                <p>{data[$lang].paragraph1}</p>
+                <p>{data[language].paragraph1}</p>
                 <p className={styles.email}>📧 hello@sandrosimon.com</p>
             </div>
     
             <div className={styles.contactForm} >
-                <p>{data[$lang].paragraph2}</p>
+                <p>{data[language].paragraph2}</p>
 
                 <form id="form" name="form" acceptCharset="utf-8" onSubmit={handleSubmit} >
                     <p>
                         <input 
                             type="text" 
                             name="name" 
-                            placeholder={data[$lang].namePlaceholder}  
+                            placeholder={data[language].namePlaceholder}  
                             value={formData.name} 
                             onChange={handleChange} 
                             required
@@ -76,7 +74,7 @@ export default function Contact() {
                         <input 
                             type="email" 
                             name="email" 
-                            placeholder={data[$lang].emailPlaceholder} 
+                            placeholder={data[language].emailPlaceholder} 
                             value={formData.email} 
                             onChange={handleChange}
                             required
@@ -87,18 +85,18 @@ export default function Contact() {
                         <textarea 
                             name="message" 
                             rows={6} 
-                            placeholder={data[$lang].messagePlaceholder} 
+                            placeholder={data[language].messagePlaceholder} 
                             value={formData.message} 
                             onChange={handleChange}
                             required
                         ></textarea>
                     </p>
-                    <button>{data[$lang].textButton}</button>
+                    <button>{data[language].textButton}</button>
                     
                 </form>
 
                 <div className={`${styles.notification} ${formSubmitted && styles.visible}`} >
-                    <p>{data[$lang].successfulMessage}</p>
+                    <p>{data[language].successfulMessage}</p>
                     
                 </div>
             </div>

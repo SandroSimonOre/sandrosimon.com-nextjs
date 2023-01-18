@@ -1,17 +1,18 @@
-//import { useStore } from '@nanostores/react';
-//import { lang } from '../store/language';
 import Image from "next/image"
+import { useContext } from 'react';
+import { LanguageContextType } from '@/@types/language';
+import { LanguageContext } from '@/contexts/languageContext';
 
-export default function LanguageToogle() {
+export const  LanguageToogle = () => {
   
-  const $lang = 'eng' // useStore(lang);
+  const { language, changeLanguage } = useContext(LanguageContext) as LanguageContextType
   
   const handleClick = () => {
     
-    if ($lang === 'eng') {
-      //lang.set('esp')
+    if (language === 'eng') {
+      changeLanguage('esp')
     } else {
-      //lang.set('eng')
+      changeLanguage('eng')
     }
 
   }
@@ -19,7 +20,7 @@ export default function LanguageToogle() {
   return (
     <div onClick={handleClick}>
       <Image 
-        src={`/assets/images/flag-${$lang === 'eng'? 'esp' : 'eng'}.svg`} 
+        src={`/assets/images/flag-${ language === 'eng'? 'esp' : 'eng'}.svg`} 
         alt="" 
         width={30}
         height={18} />

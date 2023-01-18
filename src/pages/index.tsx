@@ -1,14 +1,11 @@
 import Head from 'next/head'
-import { Inter } from '@next/font/google'
-import Hero from '@/components/Hero'
-import Projects from '@/components/Projects'
-import About from '@/components/About'
-import Skills from '@/components/Skills'
-import Certifications from '@/components/Certifications'
-import Contact from '@/components/Contact'
+import { Hero } from '@/components/Hero'
+import { Projects } from '@/components/Projects'
+import { About } from '@/components/About'
+import { Skills } from '@/components/Skills'
+import { Certifications } from '@/components/Certifications'
+import { Contact } from '@/components/Contact'
 import styles from '@/styles/Home.module.scss'
-
-const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   return (

@@ -6,7 +6,7 @@ export const Carousel = (props: ICarouselProps): JSX.Element => {
 
     const carouselContentWrapperRef = useRef<HTMLInputElement>(null)
     const carouselContentRef = useRef<HTMLInputElement>(null)
-    const { showArrows, showIndicators, children } = props
+    const { children } = props
     const [currentIndex, setCurrentIndex] = useState<number>(0)
     const [touchPosition, setTouchPosition] = useState<number | null>(null) 
     const [visibleItems, setVisibleItems] = useState<number>(0)
@@ -63,11 +63,6 @@ export const Carousel = (props: ICarouselProps): JSX.Element => {
         // Reset initial touch position
         setTouchPosition(null)
     }
-
-    const handleClick =()=>{
-        
-        alert(visibleItems)
-    }
     
     return (
         <div className={styles.carousel}>
@@ -96,6 +91,9 @@ export const Carousel = (props: ICarouselProps): JSX.Element => {
                 <button onClick={nextItem} className={styles.rightArrowButton}>
                     <span className={styles.rightArrow}>&#8250;</span>
                 </button>
+            </div>
+            <div className={styles.indicator}>
+                {`${currentIndex + 1} ${visibleItems === 2 ? ' - ' + (currentIndex + 2):''} of ${React.Children.count(children)}`}
             </div>
             
         </div>

@@ -1,10 +1,11 @@
 import Image from "next/image"
+import { useContext } from 'react';
+import { LanguageContextType } from '@/@types/language';
+import { LanguageContext } from '@/contexts/languageContext';
 import { skillsLanguage as data } from "../data/languageData"
 import styles from '../styles/Skills.module.scss'
-// import { useStore } from '@nanostores/react';
-// import { lang } from '../store/language';
 
-export default function Skills() {
+export const Skills = () => {
 	const skills = [
 		{ icon: "/assets/images/skills-js.svg", skillTitle: 'JavaScript' },
 		{ icon: "/assets/images/skills-sass.png", skillTitle: 'Sass' },
@@ -20,12 +21,12 @@ export default function Skills() {
 		{ icon: "/assets/images/skills-aws.png", skillTitle: 'AWS'}
 	]
 
-	const $lang = 'eng' //useStore(lang);
+	const { language } = useContext(LanguageContext) as LanguageContextType
 
 	return (
 
 		<section className={styles.skills}>
-			<h2>{data[$lang].title}</h2>
+			<h2>{data[language].title}</h2>
 			<div className={styles.skillsContainer}>
 	
 				{

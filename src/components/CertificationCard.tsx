@@ -1,13 +1,8 @@
 import Image from 'next/image'
+import { ICertification } from '@/interfaces/ICertification' 
 import styles from '../styles/CertificationCard.module.scss'
 
-interface Certification {
-    title: string,
-    img: string,
-    linkImg: string
-}
-
-export const CertificationCard:React.FC<Certification> = ({title, img, linkImg}) => {
+export const CertificationCard:React.FC<ICertification> = ({title, img, linkImg}) => {
     return (
         <article className={styles.certificationCard}>
             <div className={styles.imageContainer}>
