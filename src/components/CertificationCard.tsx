@@ -11,6 +11,7 @@ export const CertificationCard:React.FC<ICertification> = ({title, img, linkImg}
                         src={img} 
                         width={800}
                         height={800}
+                        priority
                         alt="" 
                     />
                 </a>
