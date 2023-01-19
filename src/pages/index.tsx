@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Script from 'next/script'
 import { Hero } from '@/components/Hero'
 import { Projects } from '@/components/Projects'
 import { About } from '@/components/About'
@@ -19,6 +20,24 @@ export default function Home() {
         <meta name="description" property='og:description' content="Welcome to my personal website" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
+
+        <div>
+          {/* Google tag (gtag.js) */}
+          <Script
+            src="https://www.googletagmanager.com/gtag/js?id=G-VY4VV4Z2LX" 
+            strategy='afterInteractive'
+          />
+          <Script id='google-analytics' strategy='afterInteractive'>
+            {`
+            
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){window.dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-VY4VV4Z2LX');
+            `}
+          </Script>
+        </div>
       </Head>
       <main className={styles.main}>
         <Hero />
