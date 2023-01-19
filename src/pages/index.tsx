@@ -20,8 +20,8 @@ export default function Home() {
         <meta name="description" property='og:description' content="Welcome to my personal website" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
-
-        <div>
+      </Head>
+      <div>
           {/* Google tag (gtag.js) */}
           <Script
             src="https://www.googletagmanager.com/gtag/js?id=G-VY4VV4Z2LX" 
@@ -37,8 +37,7 @@ export default function Home() {
               gtag('config', 'G-VY4VV4Z2LX');
             `}
           </Script>
-        </div>
-      </Head>
+      </div>
       <main className={styles.main}>
         <Hero />
         <Projects />
