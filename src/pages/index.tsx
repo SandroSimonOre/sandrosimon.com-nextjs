@@ -12,10 +12,10 @@ export default function Home() {
     <>
       <Head>
         <title>Sandro Simón</title>
-        <meta name='title' property='og:title' content='Sandro Simón | Junior Full Stack Developer' />
+        <meta name='title' property='og:title' content='MY PERSONAL WEBSITE' />
         <meta name='type' property='og:type' content='website' />
         <meta name='image' property='og:image' content='https://sandrosimon.com/assets/images/preview.jpg' />
-        <meta name='url' property='og:url' content='https://SANDROSIMON.COM' />
+        <meta name='url' property='og:url' content='https://sandrosimon.com' />
         <meta name="description" property='og:description' content="Welcome to my personal website" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
