@@ -11,7 +11,7 @@ export default function About() {
                     <Collapsible 
                         key={index}
                         title={element.title}
-                        content={element.content}
+                        paragraphs={element.paragraphs}
                     />        
                 ))
             }

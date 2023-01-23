@@ -15,7 +15,7 @@ export const heroLanguage =  {
 export const projectsLanguage =  {
 
     eng: {
-        title: "projects",
+        title: "My projects",
         technologiesTitle: "Technologies:",
         buttonTextRepo: "View on Github",
         buttonTextDemo: "Live demo",
@@ -40,7 +40,7 @@ export const projectsLanguage =  {
     },
 
     esp:  {
-        title: "proyectos",
+        title: "Mis proyectos",
         technologiesTitle: "Tecnologías:",
         buttonTextRepo: "Ver en Github",
         buttonTextDemo: "Live demo",
