@@ -20,10 +20,19 @@ export const projectsLanguage =  {
         buttonTextRepo: "View on Github",
         buttonTextDemo: "Live demo",
         projects: [
+            {
+                title: "beautiful places",
+                overview: "A web app in which the user can see places where to stay and make a reservation.",
+                technologies: "Next.js, MongoDB, React Hook Form",
+                urlImage: "/assets/images/projects-places.png",
+                linkToRepo : "https://github.com/SandroSimonOre/resort",
+                liveDemo: "https://places.sandrosimon.com/",
+                buttonTextRepo: "View on Github",
+            },
             {   
                 title: "movies browser",
                 overview: "It is an application that allows the users to browse movies and save them as a favorite on their local browser. It consumes The Movie DB API. State management with Context API and Infinite Scroll were implemented on this project.",
-                technologies: "React.js, Sass, React Router DOM, Axios, Context API, FlexBox, Grid.",
+                technologies: "React.js, Sass.",
                 urlImage: "/assets/images/projects-movies-app.jpg",
                 linkToRepo : "https://github.com/SandroSimonOre/movies-explorer",
                 liveDemo: "https://moviesexplorer.sandrosimon.com/",
@@ -36,6 +45,7 @@ export const projectsLanguage =  {
                 linkToRepo : "https://github.com/SandroSimonOre/my-store",
                 buttonTextRepo: "View on Github",
             },
+            
         ]        
     },
 
@@ -45,10 +55,19 @@ export const projectsLanguage =  {
         buttonTextRepo: "Ver en Github",
         buttonTextDemo: "Live demo",
         projects: [
+            {
+                title: "beautiful places",
+                overview: "Una aplicación que permite al usuario ver lugares en los que alojarse y hacer una reservación.",
+                technologies: "Next.js, MongoDB, React Hook Form",
+                urlImage: "/assets/images/projects-places.png",
+                linkToRepo : "https://github.com/SandroSimonOre/resort",
+                liveDemo: "https://places.sandrosimon.com/",
+                buttonTextRepo: "Ver en Github",
+            },
             {   
                 title: "movies browser",
                 overview: "Una aplicación que permite a los usuarios buscar películas y guardarlas como favoritas en su navegador local. Hace consumo de la API de The Movie DB. Gestión de estados con Context API y Scroll infinito fueron implementados en este proyecto.",
-                technologies: "React.js, Sass, React Router DOM, Axios, Context API, FlexBox, Grid.",
+                technologies: "React.js, Sass.",
                 urlImage: "/assets/images/projects-movies-app.jpg",
                 linkToRepo : "https://github.com/SandroSimonOre/movies-explorer",
                 liveDemo: "https://moviesexplorer.sandrosimon.com/",
@@ -59,7 +78,7 @@ export const projectsLanguage =  {
                 technologies: "Node.js, Express, PostgreSQL, Sequelize, Swagger, Jason Web Tokens, Git, Docker.",
                 urlImage: "/assets/images/projects-my-store-api.jpg",
                 linkToRepo : "https://github.com/SandroSimonOre/my-store",
-                buttonTextRepo: "View on Github",
+                buttonTextRepo: "Ver Github",
             },
         ]        
     }
