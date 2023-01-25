@@ -7,7 +7,7 @@ export default function About() {
     return (
         <>
             {
-                aboutData.map((element, index) => (
+                aboutData.filter(element => element.show === true).map((element, index) => (
                     <Collapsible 
                         key={index}
                         title={element.title}
