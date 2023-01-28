@@ -20,7 +20,7 @@ export const Header = () => {
                     
                     <li><a href="#about">{ data[language].aboutMe }</a></li>
                     <li><a href="#projects">{ data[language].projects }</a></li>
-                    <li><a href="#contact">{ data[language].contact }</a></li>
+                    <li><a href="/#contact">{ data[language].contact }</a></li>
                     
                 </ul>
             </nav>

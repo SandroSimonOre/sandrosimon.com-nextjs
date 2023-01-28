@@ -1,0 +1,26 @@
+.projects {
+    
+    .projectCard {
+        border: 1px solid red;
+        display: flex;
+        width: 60%;
+        height: 20rem;
+        margin: 4rem auto;
+        border-radius: 16px;
+        overflow: hidden;
+        
+        .mediaContainer {
+            border: 1px solid blue;
+            background-color: yellow;
+            width: 50%;
+            height: 100%;
+        }
+
+        .infoContainer {
+            border: 1px solid orange;
+            background-color: aqua;
+            width: 50%;
+            height: 100%;
+        }
+    }
+}
