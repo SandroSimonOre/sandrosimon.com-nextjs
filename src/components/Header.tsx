@@ -1,8 +1,10 @@
+import { useContext } from 'react';
+import Link from 'next/link';
 import { Logo } from './Logo';
 import { LanguageToogle } from './LanguageToogle';
 
 import { navbarLanguage as data } from '../data/languageData';
-import { useContext } from 'react';
+
 import { LanguageContextType } from '@/@types/language';
 import { LanguageContext } from '@/contexts/languageContext';
 
@@ -18,9 +20,9 @@ export const Header = () => {
                 <Logo />
                 <ul>
                     
-                    <li><a href="#about">{ data[language].aboutMe }</a></li>
-                    <li><a href="#projects">{ data[language].projects }</a></li>
-                    <li><a href="/#contact">{ data[language].contact }</a></li>
+                    <li><Link href="/#about">{ data[language].aboutMe }</Link></li>
+                    <li><Link href="/#projects">{ data[language].projects }</Link></li>
+                    <li><Link href="/#contact">{ data[language].contact }</Link></li>
                     
                 </ul>
             </nav>
