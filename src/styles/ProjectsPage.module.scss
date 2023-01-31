@@ -18,9 +18,28 @@
 
         .infoContainer {
             border: 1px solid orange;
-            background-color: aqua;
+            background-color: black;
             width: 50%;
             height: 100%;
+            padding: 0.5rem;
+            color: white;
+            .titleContainer {
+                text-transform: uppercase;
+                font-weight: bolder;
+            }
+
+            .technologiesContainer{
+                display: flex;
+                flex-wrap: wrap;
+                padding: 1rem 0;
+                span {
+                    background-color: gray;
+                    margin: 0.2rem;
+                    color: white;
+                    border-radius: 5px;
+                    padding: 0.2rem 0.3rem;
+                }
+            } 
         }
     }
 }
