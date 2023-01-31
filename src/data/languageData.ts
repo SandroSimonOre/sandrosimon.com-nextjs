@@ -184,3 +184,17 @@ export const navbarLanguage =  {
     }
 
 }
+
+export const footerLanguage =  {
+
+    eng: {
+        credit: 'This website was built with Next.js and TypeScript',
+        linkText: 'Go to the repository'
+    },
+
+    esp: {
+        credit: 'Esta web ha sido construída con Next.js y TypeScript',
+        linkText: 'Ir al repositorio'
+    }
+
+}
