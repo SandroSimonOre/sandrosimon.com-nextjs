@@ -53,7 +53,7 @@ export const Contact = () => {
     
             <div className={styles.contactInfo}>
                 <p>{data[language].paragraph1}</p>
-                <p className={styles.email}>📧 hello@sandrosimon.com</p>
+                <p className={styles.email}>📧 sandrosimonore@gmail.com</p>
             </div>
     
             <div className={styles.contactForm} >
