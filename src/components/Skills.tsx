@@ -7,18 +7,18 @@ import styles from '../styles/Skills.module.scss'
 
 export const Skills = () => {
 	const skills = [
-		{ icon: "/assets/images/skills-js.svg", skillTitle: 'JavaScript' },
-		{ icon: "/assets/images/skills-sass.png", skillTitle: 'Sass' },
-		{ icon: "/assets/images/skills-reactjs.svg", skillTitle: 'React. js'}, 
-		{ icon: "/assets/images/skills-nodejs.svg", skillTitle:  'Node. js'}, 
+		{ icon: "/assets/images/skills-typescript.svg", skillTitle: 'TypeScript' },
+		{ icon: "/assets/images/skills-reactjs.svg", skillTitle: 'React.js'}, 
+		{ icon: "/assets/images/skills-nextjs.svg", skillTitle:  'Next.js' },
+		{ icon: "/assets/images/skills-nodejs.svg", skillTitle:  'Node.js'}, 
 		{ icon: "/assets/images/skills-expressjs.svg", skillTitle: 'Express' },
-		{ icon: "/assets/images/skills-nextjs.svg", skillTitle:  'Next' },
 		{ icon: "/assets/images/skills-postgresql.png", skillTitle: 'PostgreSQL' },
 		{ icon: "/assets/images/skills-mysql.svg", skillTitle: 'MySQL' },
 		{ icon: "/assets/images/skills-mongodb.svg", skillTitle: 'MongoDB' },
 		{ icon: "/assets/images/skills-git.svg", skillTitle: 'Git' },
 		{ icon: "/assets/images/skills-docker.webp", skillTitle: 'Docker' },
-		{ icon: "/assets/images/skills-aws.png", skillTitle: 'AWS'}
+		{ icon: "/assets/images/skills-aws.png", skillTitle: 'AWS'},
+		{ icon: "/assets/images/skills-kubernetes.svg", skillTitle: 'Kubernetes' },
 	]
 
 	const { language } = useContext(LanguageContext) as LanguageContextType
