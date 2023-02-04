@@ -23,7 +23,6 @@ export const Collapsible =({title, paragraphs}: Props)=>{
                 <h2 className={styles.title} >{title}</h2>
                 <div 
                     className={styles.arrow}
-                    
                 >
                     {
                         open 
