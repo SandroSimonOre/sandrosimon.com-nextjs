@@ -13,50 +13,52 @@ export const Projects = () => {
         <section id='projects' className={styles.projects}>
                 
             <h2>{data[language].title}</h2>
-
-            {
-                data[language].projects.map( (p, i) => (
+            <div className={styles.projectsContainer}>
+                {
+                    data[language].projects.map( (p, i) => (
+                        
+                        <article className={styles.project} key={i}>
                     
-                    <article className={styles.project} key={i}>
-                
-                            <div className={styles.screenshot}>
-                                <Image 
-                                    src={p.urlImage}
-                                    width={800}
-                                    height={300} 
-                                    alt="" 
-                                />
-                            </div>
-                            <div className={styles.overview}>
-                                <h4>{p.title}</h4>
-                                <br />
-                                <p>{p.overview}</p>
-                                
-                                <br />
-                                <span>{data[language].technologiesTitle}</span>
-                                
-                                <p>{p.technologies}</p>
-
-                                <br />
-                                <div className={styles.buttonsContainer}>
-                                    { 
-                                        p.liveDemo && <a className={styles.button} href={p.liveDemo} target="_blank" rel="noopener noreferrer">
-                                            {data[language].buttonTextDemo}
-                                        </a> 
-                                    }
-                                    { 
-                                        p.linkToRepo && <a className={styles.button} href={p.linkToRepo} target="_blank" rel="noopener noreferrer">
-                                            {data[language].buttonTextRepo}
-                                        </a> 
-                                    }
+                                <div className={styles.screenshot}>
+                                    <Image 
+                                        src={p.urlImage}
+                                        width={800}
+                                        height={300} 
+                                        alt="" 
+                                    />
                                 </div>
-                            
-                            </div>
-                    </article>
+                                <div className={styles.overview}>
+                                    <h4>{p.title}</h4>
+                                    
+                                    <div className={styles.technologies}>
+                                        {p.technologies.map((t, i) => <span key={i}>{t}</span>)}
+                                    </div>
+                                    
+                                    <p>{p.overview}</p>
 
-                ))
-                    
-            }
+                                    {
+                                        p.liveDemo 
+                                        ?
+                                            <a className={styles.button} href={p.liveDemo} target="_blank" rel="noopener noreferrer">
+                                                {data[language].buttonTextDemo}
+                                            </a> 
+                                        :
+                                            <a className={styles.button} href={p.linkToRepo} target="_blank" rel="noopener noreferrer">
+                                                {data[language].buttonTextRepo}
+                                            </a> 
+                                    }
+                                
+                                </div>
+                        </article>
 
-    </section>
+                    ))
+                        
+                }
+            </div>
+            
+            {/* <a href="#">More projects...</a> */}
+            
+            
+
+        </section>
 )}

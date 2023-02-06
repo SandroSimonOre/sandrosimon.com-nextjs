@@ -17,9 +17,7 @@
     .projects {
     
         margin-bottom: 4rem;
-        padding: 3rem 3rem;
-        border-radius: 5px;
-        
+        padding: 3rem 5rem;
         width: 75%;
         height: auto;
         display: flex;
@@ -33,51 +31,84 @@
             text-transform: uppercase;
         }
 
-        .project {
+        .projectsContainer {
 
-            display: flex;
-            justify-content: space-between;    
-            align-items: center;
-            margin-bottom: 4rem;
-
-            .screenshot {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
             
-                width: 50%;
+            .project {
+
+                border-radius: 5px;
+                overflow: hidden;        
+                display: grid;
+                grid-template-rows: 1fr 2.5fr;
+                //flex-direction: column;
+                border: 1px solid gray;
                 
-                img {
-                    width: 25rem;
-                    border-radius: 5px;
-                };
+                .screenshot {
+                
+                    img {
+                        width: 100%;
+                        height: auto;
+                    };
+                }
+
+                .overview {
+                
+                    display: flex;
+                    //grid-template-rows: 1fr 1fr 3fr 1fr;
+                    flex-direction: column;
+                    padding: 0 0.7rem;
+                    width: 100%;
+
+                    h4 {
+                        padding: 1rem 0 0.5rem;
+                        text-transform: uppercase;  
+                    }
+
+                    .technologies {
+                        display: flex;
+                        flex-wrap: wrap;
+                        gap: 0.5rem;
+                        margin: 1rem 0;
+                        
+                        span {
+                            line-height: 1rem;
+                            border-radius: 5px;
+                            font-size: 0.7rem;
+                            background-color: black;
+                            color: white;
+                            padding: 0.2rem 0.5rem ;
+                        }
+                    }
+
+                    p {
+                        line-height: 1.5rem;
+                    }
+    
+                    a {
+                        align-self: center;
+                        margin: 1rem auto;
+                        text-decoration: underline;
+                        color: blue;
+                        
+                    }
+                }
+    
             }
-
-            .overview {
-            
-                display: flex;
-                flex-direction: column;
-                //align-items: center;
-                width: 50%;
-                
-                h4 {    
-                text-transform: uppercase;  
-                }
-                
-                p {
-                    line-height: 1.5rem;
-                }
-
-                span {
-                    align-self: flex-start;
-                    font-weight: bold;
-                }
-
-                .buttonsContainer {
-                    
-                    @include button('button', #335EFF, white, 8, 3, 3);
-                    
-                }
-            }
-
         }
+
+        /* a {
+            padding: 1rem;
+            margin: 2rem auto 0;
+            border: 1px solid red;
+            text-align: center;
+            width: 10rem;
+            border-radius: 8px;
+        } */
+
+        
 
     
 }
@@ -87,47 +118,24 @@
     .projects { 
         // portfolio
         display: flex;
-        align-items: center;
-        margin: 0;
-        padding: 3rem 0;
-        text-align: center;
         width: 100%;
-
-        h2 {
-            padding-bottom: 2rem; 
-                      
-        }
-        .project {
+        padding: 3rem;
+        margin: 0;
+        
+        .projectsContainer {
             
-            border: 1px solid gray;
+            display: flex;
             flex-direction: column;
-            width: 90%;
-            border-radius: 10px;
-            overflow: hidden;
-            padding-bottom: 1rem;
-            margin-bottom: 2rem;
 
-            .screenshot {
-                
-                width: 100%;
-                margin-bottom: 1rem;
+            .project {
+                margin-bottom: 5rem;
 
-                img {
-                    width: 100%;
-                    border-radius: 0;
-                }
-            }
-
-            .overview {
-                width: 90%;
-                
-                .buttonsContainer {
-                    display: flex;
-                    width: 100%;
-                    justify-content: space-around;
+                .overview .technologies span {
+                    font-size: 1rem;
                 }
             }
         }
-
+        
+        
     }
 }
