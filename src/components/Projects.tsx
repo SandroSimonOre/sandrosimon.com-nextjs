@@ -36,17 +36,20 @@ export const Projects = () => {
                                     
                                     <p>{p.overview}</p>
 
-                                    {
-                                        p.liveDemo 
-                                        ?
-                                            <a className={styles.button} href={p.liveDemo} target="_blank" rel="noopener noreferrer">
-                                                {data[language].buttonTextDemo}
-                                            </a> 
-                                        :
-                                            <a className={styles.button} href={p.linkToRepo} target="_blank" rel="noopener noreferrer">
-                                                {data[language].buttonTextRepo}
-                                            </a> 
-                                    }
+                                    <p className={styles.link}>
+                                        {
+                                            p.liveDemo 
+                                            ?
+                                                <a className={styles.button} href={p.liveDemo} target="_blank" rel="noopener noreferrer">
+                                                    {p.buttonTextDemo}
+                                                </a> 
+                                            :
+                                                <a className={styles.button} href={p.linkToRepo} target="_blank" rel="noopener noreferrer">
+                                                    {p.buttonTextRepo}
+                                                </a>
+                                                
+                                        }
+                                    </p>
                                 
                                 </div>
                         </article>

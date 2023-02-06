@@ -17,8 +17,6 @@ export const projectsLanguage =  {
     eng: {
         title: "My projects",
         technologiesTitle: "Technologies:",
-        buttonTextRepo: "View on Github",
-        buttonTextDemo: "Live demo",
         projects: [
             {
                 title: "beautiful places",
@@ -28,6 +26,7 @@ export const projectsLanguage =  {
                 linkToRepo : "https://github.com/SandroSimonOre/resort",
                 liveDemo: "https://places.sandrosimon.com/",
                 buttonTextRepo: "View on Github",
+                buttonTextDemo: "Live demo",
             },
             {   
                 title: "movies browser",
@@ -36,6 +35,8 @@ export const projectsLanguage =  {
                 urlImage: "/assets/images/projects-movies.png",
                 linkToRepo : "https://github.com/SandroSimonOre/movies-explorer",
                 liveDemo: "https://moviesexplorer.sandrosimon.com/",
+                buttonTextRepo: "View on Github",
+                buttonTextDemo: "Live demo",
             },
             {
                 title: "store api rest",
@@ -44,6 +45,7 @@ export const projectsLanguage =  {
                 urlImage: "/assets/images/projects-mystore.png",
                 linkToRepo : "https://github.com/SandroSimonOre/my-store",
                 buttonTextRepo: "View on Github",
+                
             },
             
         ]        
@@ -52,8 +54,6 @@ export const projectsLanguage =  {
     esp:  {
         title: "Mis proyectos",
         technologiesTitle: "Tecnologías:",
-        buttonTextRepo: "Ver en Github",
-        buttonTextDemo: "Live demo",
         projects: [
             {
                 title: "beautiful places",
@@ -63,6 +63,7 @@ export const projectsLanguage =  {
                 linkToRepo : "https://github.com/SandroSimonOre/resort",
                 liveDemo: "https://places.sandrosimon.com/",
                 buttonTextRepo: "Ver en Github",
+                buttonTextDemo: "Live demo",
             },
             {   
                 title: "movies browser",
@@ -71,6 +72,8 @@ export const projectsLanguage =  {
                 urlImage: "/assets/images/projects-movies.png",
                 linkToRepo : "https://github.com/SandroSimonOre/movies-explorer",
                 liveDemo: "https://moviesexplorer.sandrosimon.com/",
+                buttonTextRepo: "Ver en Github",
+                buttonTextDemo: "Live demo",
             },
             {
                 title: "store api rest",
