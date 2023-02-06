@@ -61,3 +61,20 @@
     }
 
 }
+
+@media (max-width: 768px) {
+    
+    .footer {
+        
+        .sourceLink {
+            align-items: center;
+            text-align: center;
+            p {
+                text-align: center;
+                line-height: 1.5rem;
+                width: 60%;
+            }
+        } 
+    }
+}
+        
