@@ -19,7 +19,15 @@ export const projectsLanguage =  {
         technologiesTitle: "Technologies:",
         projects: [
             {
-                title: "beautiful places",
+                title: "bookstore",
+                overview: "The user can check prices and other information about books, add some titles to the cart and pay for them with Paypal or credit card. This app is available for mobile devices as well.",
+                technologies: ["Next.js", "Tailwind CSS", "MongoDB", "Mongoose", "React Hook Form", "Redux Tool Kit", "Next Auth"],
+                urlImage: "/assets/images/projects-bookstore.png",
+                liveDemo: "https://bookstore.sandrosimon.com/",
+                buttonTextDemo: "Live demo",
+            },
+            {
+                title: "online booking",
                 overview: "A web app in which the user can see places where to stay and make a reservation.",
                 technologies: ["Next.js", "MongoDB", "Mongoose", "React Hook Form"],
                 urlImage: "/assets/images/projects-places.png",
@@ -55,6 +63,14 @@ export const projectsLanguage =  {
         title: "Mis proyectos",
         technologiesTitle: "Tecnologías:",
         projects: [
+            {
+                title: "bookstore",
+                overview: "El usuario puede revisar precios y otra información sobre libros, agregar algunos títulos al carrito y pagar por ellos usando Paypal o tarjeta de crédito. Esta aplicación también está disponible para dispositivos móbiles.",
+                technologies: ["Next.js", "Tailwind CSS", "MongoDB", "Mongoose", "React Hook Form", "Redux Tool Kit", "Next Auth"],
+                urlImage: "/assets/images/projects-bookstore.png",
+                liveDemo: "https://bookstore.sandrosimon.com/",
+                buttonTextDemo: "Live demo",
+            },
             {
                 title: "beautiful places",
                 overview: "Una aplicación que permite al usuario ver lugares en los que alojarse y hacer una reservación.",

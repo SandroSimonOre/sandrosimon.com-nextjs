@@ -15,7 +15,7 @@ export const Projects = () => {
             <h2>{data[language].title}</h2>
             <div className={styles.projectsContainer}>
                 {
-                    data[language].projects.map( (p, i) => (
+                    data[language].projects.slice(0,3).map( (p, i) => (
                         
                         <article className={styles.project} key={i}>
                     
