@@ -28,7 +28,12 @@
             display: grid;
             grid-template-rows: 1fr 2.5fr;
             border: 1px solid gray;
-            
+            transition: all .2s ease-in-out;
+
+            &:hover {
+                transform: scale(1.02);
+            }
+
             .screenshot {
             
                 img {
