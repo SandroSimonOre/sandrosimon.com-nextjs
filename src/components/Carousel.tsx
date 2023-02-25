@@ -1,4 +1,4 @@
-import React, { useState, useRef, useLayoutEffect } from "react"
+import React, { useState, useRef, useEffect } from "react"
 import { useContext } from 'react';
 import { LanguageContextType } from '@/@types/language';
 import { LanguageContext } from '@/contexts/languageContext';
@@ -17,7 +17,7 @@ export const Carousel = (props: ICarouselProps): JSX.Element => {
     const [touchPosition, setTouchPosition] = useState<number | null>(null) 
     const [visibleItems, setVisibleItems] = useState<number>(0)
     
-    useLayoutEffect(()=>{
+    useEffect(()=>{
         if (carouselContentWrapperRef.current != null && carouselContentRef.current != null) {
             setVisibleItems(carouselContentWrapperRef.current.clientWidth / carouselContentRef.current.children[0].clientWidth)
         }   
