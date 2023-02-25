@@ -21,20 +21,20 @@ export const Hero = () => {
         <section className={styles.hero}>   
 
             <div className={styles.content}>       
-                <div className={styles.presentation}>
-                    <h1>{ data[language].title }</h1>
-                    <br/>
-                    <p>{ data[language].presentation }</p>
-                </div>
-
                 <div className={styles.illustration}>
                     <Image 
-                        src='/assets/images/hero-developer-activity.svg'
+                        //src='/assets/images/hero-developer-activity.svg'
+                        src='/me.jpg'
                         alt=""
                         width={300}
                         height={300} 
                     />
                 </div> 
+                <div className={styles.presentation}>
+                    <h1>{ data[language].title }</h1>
+                    <br/>
+                    <p>{ data[language].presentation }</p>
+                </div>
             </div>
         
             <div className={styles.socialMedia}>

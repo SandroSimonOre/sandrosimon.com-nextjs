@@ -22,9 +22,12 @@
             display: flex;
             justify-content: center;
             align-items: center;
-
+            
             img {
+                border-radius: 50%;
                 width: 60%;
+                height: auto;
+                //object-fit: cover;
             }
 
         }
@@ -88,11 +91,11 @@
         .content {
             
             padding-top: 1rem;
-            flex-direction: column-reverse;
+            flex-direction: column;
 
             .illustration {
                 width: 100%;
-                margin: 3rem 0 0;
+                margin: 3rem 0;
             }
 
             .presentation {
