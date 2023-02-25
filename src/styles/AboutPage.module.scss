@@ -1,18 +1,37 @@
 .aboutPage {
-    //display: flex;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5rem;
     background-color: black;
 
     .hero {
         display: flex;
         padding: 2rem 0;
-        margin: 1rem auto;
+        margin: 0 auto;
         width: 60%;
-        column-gap: 2rem;
+        column-gap: 5rem;
 
         .text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            //align-items: center;
             width: 50%;
             color: white;
-            line-height: 1.5rem;
+            line-height: 1.7rem;
+            row-gap: 1rem;
+            font-size: 1.2rem;
+
+            p {
+                text-align: center;
+            }
+            
+        }
+
+        .image {
+            //border: 1px solid white;
+            border-radius: 10px;
+            overflow: hidden;
         }
 
     }
