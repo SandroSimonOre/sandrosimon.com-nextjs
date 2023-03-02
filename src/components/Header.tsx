@@ -20,7 +20,7 @@ export const Header = () => {
                 <Logo />
                 <ul>
                     
-                    <li><Link href="/#about">{ data[language].aboutMe }</Link></li>
+                    {/* <li><Link href="/#about">{ data[language].aboutMe }</Link></li> */}
                     <li><Link href="/#projects">{ data[language].projects }</Link></li>
                     <li><Link href="/#contact">{ data[language].contact }</Link></li>
                     

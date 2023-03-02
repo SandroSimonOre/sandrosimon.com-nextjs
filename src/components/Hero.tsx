@@ -32,27 +32,27 @@ export const Hero = () => {
                 </div> 
                 <div className={styles.presentation}>
                     <h1>{ data[language].title }</h1>
-                    <br/>
                     <p>{ data[language].presentation }</p>
+                    <div className={styles.socialMedia}>
+                        <ul>
+                            {socialMedia.map((sm, i) => (
+                                <li key={i}>
+                                    <a href={sm.link} target="_blank" rel="noopener noreferrer">
+                                        <Image 
+                                            src={`/assets/images/${sm.icon}`} 
+                                            width={200}
+                                            height={200}
+                                            alt="" 
+                                        />
+                                    </a>
+                                </li>
+                            ))}
+                        </ul> 
+                    </div>
                 </div>
             </div>
         
-            <div className={styles.socialMedia}>
-                <ul>
-                    {socialMedia.map((sm, i) => (
-                        <li key={i}>
-                            <a href={sm.link} target="_blank" rel="noopener noreferrer">
-                                <Image 
-                                    src={`/assets/images/${sm.icon}`} 
-                                    width={200}
-                                    height={200}
-                                    alt="" 
-                                />
-                            </a>
-                        </li>
-                    ))}
-                </ul> 
-            </div>  
+              
 
         </section>
 

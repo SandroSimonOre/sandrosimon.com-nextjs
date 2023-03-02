@@ -2,12 +2,12 @@ export const heroLanguage =  {
 
     eng: {
         title: "Hello, I'm Sandro Simón,",
-        presentation: "a self-taught Full Stack Developer currently living in Perú looking for an opportunity to work remotely in the technology industry. I love developing with the JavaScript ecosystem: React.js, Node.js, Express, and with relational databases like PostgreSQL and MySQL."
+        presentation: "an Accountant based in Perú who is passionate about programming, currently undergoing a career change. I enjoy developing applications that involve data manipulation and analysis."
     },
 
     esp: {
         title: "Hola, soy Sandro Simón,",
-        presentation: "un Full Stack Developer autodidacta actualmente viviendo en Perú en busca de una oportunidad para trabajar en el sector de tecnología de forma remota. Me encanta desarrollar con el ecosistema de JavaScript: React.js, Node.js, Express y con bases de datos relacionales como PostgreSQL y MySQL."
+        presentation: "un Contador residente en Perú apasionado por la programación, actualmente haciendo un cambio de carrera. Disfruto desarrollando aplicaciones que involucran manipulación y análisis de datos."
     }
     
 }
