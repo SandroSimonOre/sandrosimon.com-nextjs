@@ -1,13 +1,13 @@
 import styles from '../styles/VideoContainer.module.scss'
 
-interface VideoContainerProps {
+interface Props {
     videoId: string
     width: string
     height: string
     title: string
 }
 
-export const VideoContainer = ({ videoId, width, height, title }: VideoContainerProps ) => (
+export const VideoContainer = ({ videoId, width, height, title }: Props ) => (
     <div className={styles.videoContainer}>
       <iframe
         width={width} //"853"

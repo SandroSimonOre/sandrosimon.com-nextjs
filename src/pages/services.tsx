@@ -1,5 +1,6 @@
 import styles from '../styles/ServicesPage.module.scss'
 import Image from 'next/image'
+
 export default function Services() {
 
     const benefits = [
