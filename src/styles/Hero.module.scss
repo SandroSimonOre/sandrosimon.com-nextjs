@@ -12,7 +12,6 @@
         justify-content: center;
         width: 100%;
         padding-top: 3rem;
-        //padding-bottom: 5rem;
         margin-bottom: 2rem;
         color: white;
         
@@ -53,28 +52,6 @@
                 font-size: 1.2rem;
             }
 
-            .socialMedia {
-                
-                margin-top: 2rem;
-                width: 70%;
-                align-self: center;
-                
-                ul {
-                    display: flex;
-                    height: 3rem;
-                    align-items: center;
-                    border-radius: 10px;
-                    background-color: white;
-                    justify-content: space-around;
-                
-                    img {
-                        width: 2rem;
-                        height: 2rem;
-                    }
-                }
-        
-            }
-
         }
 
     }
@@ -103,10 +80,6 @@
                 width: 100%;
 
                 h1, p {
-                    width: 80%;
-                }
-
-                .socialMedia {
                     width: 80%;
                 }
 

@@ -11,7 +11,6 @@ export const Skills = () => {
 		{ icon: "/assets/images/skills-reactjs.svg", skillTitle: 'React.js'}, 
 		{ icon: "/assets/images/skills-nextjs.svg", skillTitle:  'Next.js' },
 		{ icon: "/assets/images/skills-nodejs.svg", skillTitle:  'Node.js'}, 
-		{ icon: "/assets/images/skills-expressjs.svg", skillTitle: 'Express' },
 		{ icon: "/assets/images/skills-postgresql.png", skillTitle: 'PostgreSQL' },
 		{ icon: "/assets/images/skills-mysql.svg", skillTitle: 'MySQL' },
 		{ icon: "/assets/images/skills-mongodb.svg", skillTitle: 'MongoDB' },
@@ -19,6 +18,7 @@ export const Skills = () => {
 		{ icon: "/assets/images/skills-docker.webp", skillTitle: 'Docker' },
 		{ icon: "/assets/images/skills-aws.png", skillTitle: 'AWS'},
 		{ icon: "/assets/images/skills-kubernetes.svg", skillTitle: 'Kubernetes' },
+		{ icon: "/assets/images/skills-python.svg", skillTitle: 'Python' }
 	]
 
 	const { language } = useContext(LanguageContext) as LanguageContextType

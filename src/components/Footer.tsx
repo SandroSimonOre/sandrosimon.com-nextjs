@@ -42,19 +42,7 @@ export const Footer = () => {
 
             </div>
             
-            <div className={styles.sourceLink}>
-                <p>{data[language].credit}</p>
-                <p>
-                    
-                    <a 
-                        href='https://github.com/SandroSimonOre/sandrosimon.com-nextjs'
-                        target="_blank" rel="noopener noreferrer"
-                    >
-                        <span>{data[language].linkText}</span>
-                    </a>
-                </p>
-            </div>
-
+            
         </footer>
     )
 }
