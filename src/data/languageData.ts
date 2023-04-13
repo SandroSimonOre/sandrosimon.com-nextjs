@@ -23,7 +23,9 @@ export const projectsLanguage =  {
                 overview: "The user can check prices and other information about books, add some titles to the cart and pay for them with Paypal or credit card. This app is available for mobile devices as well.",
                 technologies: ["Next.js", "Tailwind CSS", "MongoDB", "Mongoose", "React Hook Form", "Redux Tool Kit", "Next Auth"],
                 urlImage: "/assets/images/projects-bookstore.png",
+                linkToRepo : "https://github.com/SandroSimonOre/next-ecommerce",
                 liveDemo: "https://bookstore.sandrosimon.com/",
+                buttonTextRepo: "View on Github",
                 buttonTextDemo: "Live demo",
             },
             {
@@ -47,6 +49,17 @@ export const projectsLanguage =  {
                 buttonTextDemo: "Live demo",
             },
             {
+                title: "video library",
+                overview: "This is a simple web app that allows the user to browse a small videos catalog. It implements search, filter and sort features.",
+                technologies: ["React.js", "Sass"],
+                urlImage: "/assets/images/projects-videolibrary.jpg",
+                linkToRepo : "https://github.com/SandroSimonOre/videolibrary",
+                liveDemo : "https://videolibrary.sandrosimon.com",
+                buttonTextRepo: "View on Github",
+                buttonTextDemo: "Live demo",
+                
+            },
+            {
                 title: "store api rest",
                 overview: "An application that allows the user to create, modify, query and delete entities such as products, customers, and orders. Access to the endpoints is according to the user's role.",
                 technologies: ["Node.js", "Express", "PostgreSQL", "Sequelize", "Swagger", "JWT"],
@@ -68,7 +81,9 @@ export const projectsLanguage =  {
                 overview: "El usuario puede revisar precios y otra información sobre libros, agregar algunos títulos al carrito y pagar por ellos usando Paypal o tarjeta de crédito. Esta aplicación también está disponible para dispositivos móbiles.",
                 technologies: ["Next.js", "Tailwind CSS", "MongoDB", "Mongoose", "React Hook Form", "Redux Tool Kit", "Next Auth"],
                 urlImage: "/assets/images/projects-bookstore.png",
+                linkToRepo : "https://github.com/SandroSimonOre/next-ecommerce",
                 liveDemo: "https://bookstore.sandrosimon.com/",
+                buttonTextRepo: "Ver en Github",
                 buttonTextDemo: "Live demo",
             },
             {
@@ -90,6 +105,17 @@ export const projectsLanguage =  {
                 liveDemo: "https://movies.sandrosimon.com/",
                 buttonTextRepo: "Ver en Github",
                 buttonTextDemo: "Live demo",
+            },
+            {
+                title: "video library",
+                overview: "Esta es una simple apliación que permite al usuario explorar un pequeño catálogo de videos. La aplicación implementa funcionalidades de búsqueda, filtrado y ordenación para lo cual se usa el hook useState.",
+                technologies: ["React.js", "Sass"],
+                urlImage: "/assets/images/projects-videolibrary.jpg",
+                linkToRepo : "https://github.com/SandroSimonOre/videolibrary",
+                liveDemo : "https://videolibrary.sandrosimon.com",
+                buttonTextRepo: "Ver en Github",
+                buttonTextDemo: "Live demo",
+                
             },
             {
                 title: "store api rest",

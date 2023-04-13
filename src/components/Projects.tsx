@@ -15,7 +15,7 @@ export const Projects = () => {
             <h2>{data[language].title}</h2>
             <div className={styles.projectsContainer}>
                 {
-                    data[language].projects.slice(0,3).map( (p, i) => (
+                    data[language].projects.slice(0,4).map( (p, i) => (
                         
                         <article className={styles.project} key={i}>
                     
@@ -36,20 +36,26 @@ export const Projects = () => {
                                     
                                     <p>{p.overview}</p>
 
-                                    <p className={styles.link}>
+                                    <div className={styles.links}>
+                                        
                                         {
-                                            p.liveDemo 
-                                            ?
+                                            p.liveDemo ?
                                                 <a className={styles.button} href={p.liveDemo} target="_blank" rel="noopener noreferrer">
                                                     {p.buttonTextDemo}
-                                                </a> 
-                                            :
-                                                <a className={styles.button} href={p.linkToRepo} target="_blank" rel="noopener noreferrer">
-                                                    {p.buttonTextRepo}
                                                 </a>
-                                                
+                                            :
+                                            null
                                         }
-                                    </p>
+
+                                        {
+                                            p.linkToRepo ?
+                                            <a className={styles.button} href={p.linkToRepo} target="_blank" rel="noopener noreferrer">
+                                                {p.buttonTextRepo}
+                                            </a>
+                                        :
+                                            null
+                                        }
+                                    </div>
                                 
                                 </div>
                         </article>

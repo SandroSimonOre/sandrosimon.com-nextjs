@@ -19,19 +19,15 @@
     .projectsContainer {
 
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         gap: 2rem;
         
         .project {
 
             border-radius: 5px;
             overflow: hidden;        
-            display: grid;
-            grid-template-rows: 1fr 2.5fr;
-            //border: 1px solid gray;
             transition: all .2s ease-in-out;
             background-color: black;
-
             &:hover {
                 transform: scale(1.02);
             }
@@ -77,12 +73,21 @@
                     line-height: 1.5rem;
                 }
 
-                .link {
+                .links {
+                    //border: solid red 1px;
+                    padding: 1rem;
+                    display: flex;
+                    justify-content: space-around;
+                    justify-self: flex-end;
+                    margin-bottom: 1.5rem;
 
-                    margin: 1rem auto;
                     a {
-                        text-decoration: underline;
-                        white-space: nowrap;
+                        border: solid white 1px;
+                        color: white;
+                        width: 10rem;
+                        text-align: center;
+                        padding: 10px 10px;
+                        border-radius: 5px;
                     }
                 }
                 
@@ -90,18 +95,6 @@
 
         }
     }
-
-    /* a {
-        padding: 1rem;
-        margin: 2rem auto 0;
-        border: 1px solid red;
-        text-align: center;
-        width: 10rem;
-        border-radius: 8px;
-    } */
-
-    
-
     
 }
 
@@ -122,8 +115,23 @@
             .project {
                 margin-bottom: 5rem;
 
-                .overview .technologies span {
-                    font-size: 1rem;
+                .overview  {
+
+                    .technologies span {
+                        font-size: 0.8rem;
+                    }
+
+                    .links {
+                        
+                        flex-direction: column;
+                        padding: 10px 0;
+                        gap: 1rem;
+
+                        a {
+                            width: 100%;
+                        }
+                    }
+                    
                 }
 
             }
