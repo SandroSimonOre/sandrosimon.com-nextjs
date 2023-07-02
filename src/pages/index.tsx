@@ -1,9 +1,9 @@
 import Head from 'next/head'
 import Script from 'next/script'
 import { Hero } from '@/components/Hero'
-import { Projects } from '@/components/Projects'
+
 import { Skills } from '@/components/Skills'
-import { Certifications } from '@/components/Certifications'
+
 import styles from '@/styles/Home.module.scss'
 
 export default function Home() {
@@ -38,9 +38,9 @@ export default function Home() {
       </div>
       <main className={styles.main}>
         <Hero />
-        <Projects />
+        
         <Skills />
-        <Certifications />
+        
         
       </main>
     </>

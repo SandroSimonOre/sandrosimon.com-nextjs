@@ -1,18 +1,14 @@
 import Image from 'next/image'
-import { useContext } from 'react';
-import { LanguageContextType } from '@/@types/language';
-import { LanguageContext } from '@/contexts/languageContext';
-import { footerLanguage as data } from '../data/languageData';
 
 import styles from '../styles/Footer.module.scss'
 
 export const Footer = () => {
-    
-    const { language } = useContext(LanguageContext) as LanguageContextType
 
     const footerSocialMedia = [
         { link: 'https://linkedin.com/in/sandrosimonore/', icon: 'social-media-footer-linkedin.png', title:'Linkedin'},
-        { link:'https://github.com/sandrosimonore', icon: 'social-media-footer-github.png', title:'Github'}
+        { link: 'https://www.youtube.com/@sandrosimon', icon: 'social-media-footer-youtube.png',  title:'YouTube'},
+        { link: 'https://www.facebook.com/SandroSimonOre/', icon: 'social-media-footer-facebook.png',  title:'Facebook'},
+        
     ]
     
     return (
